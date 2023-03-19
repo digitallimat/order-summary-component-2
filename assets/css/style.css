@@ -1,0 +1,211 @@
+/* CSS Document 
+-------------------------------*/
+
+
+/* Import Google Fonts
+-------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800&display=swap');
+
+/* Box sizing rules 
+-------------------------------*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Set root defaults 
+-------------------------------*/ 
+:root {
+    /*    Colors
+    ------------*/
+    --clr-primary-1: hsl(225, 100%, 94%);
+    --clr-primary-2: hsl(245, 75%, 52%);
+    
+    --clr-neutral-1: hsl(225, 100%, 98%);
+    --clr-neutral-2: hsl(224, 23%, 55%);
+    --clr-neutral-3: hsl(223, 47%, 23%);
+    
+    /*    Fonts
+    ------------*/
+    --font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Remove default margin & padding 
+-------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Default Font size 10px 
+-------------------------------*/
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* Set body defaults 
+-------------------------------*/
+body {
+    font-family: var(--font-family);
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    display: grid;
+    place-content: center;
+    background-color: var(--clr-primary-1);
+    background: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0%;
+}
+
+/* Make images easier to work with 
+-------------------------------*/
+img, picture, video, canvas, svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove list styles  
+-------------------------------*/
+ul, ol {
+    list-style: none;
+}
+
+/* Remove hyperlinks styles  
+-------------------------------*/
+a {
+    text-decoration: none;
+}
+
+/* Inherit fonts for inputs and buttons 
+-------------------------------*/
+input, button, textarea, select {
+    font: inherit;
+    border: none;
+    outline: none;
+}
+
+
+.order{
+    margin: 1.2rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.order__container{
+    max-width: 30rem;
+    background: var(--clr-neutral-1);
+}
+
+
+
+
+
+.order__text-content {
+    display: grid;
+    gap: 2.4rem;
+    padding: 2.4rem;
+    text-align: center;
+}
+
+.order__heading {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--clr-neutral-3)
+}
+
+.order__description {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--clr-neutral-2);
+}
+
+.order__plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order__plan-annual {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.order__plan-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--clr-neutral-3);
+}
+
+
+.order__plan-price span{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--clr-neutral-2);
+}
+
+.order__plan-change {
+    font-size: 1.4rem;
+    color: var(--clr-primary-2);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: .3rem;
+}
+.order__plan-change:hover{
+    text-decoration: none;
+    transition: .3s ease;
+    
+    
+}
+
+.order__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.btn{
+    width: 100%;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 1.2rem;
+}
+
+.btn--payment{
+    background: var(--clr-primary-2);
+    color: var(--clr-primary-1);
+    box-shadow: 0 1rem 5rem hsla(245, 75%, 52%, o.3);
+}
+
+.btn--payment:hover{
+    background: hsl(245, 75%, 65%);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn--cancel{
+    background: transparent;
+    color: var(--clr-neutral-2);
+}
+
+.btn--cancel:hover{
+    color: var(--cle-neutral-3);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+ .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width:451px){
+body {
+    background: url(../images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+}
+    
+}
